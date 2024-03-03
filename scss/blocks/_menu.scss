@@ -1,27 +1,26 @@
 .menu {
-    width: 100%;
-    margin-top: 25px;
-  }
-  
-  .menu__container {
+  width: 100%;
+  margin-top: 25px;
+
+  &__container {
     display: flex;
     align-items: center;
     justify-content: space-between;
   }
   
-  .menu__logo-container {
+  &__logo-container {
     display: flex;
     align-items: center;
     gap: 15px;
     margin-right: 50px;
   }
   
-  .menu__list {
+  &__list {
     display: flex;
     gap: 42px;
   }
   
-  .menu__item {
+  &__item {
     font-size: 12px;
     font-weight: 700;
     line-height: 15px;
@@ -33,12 +32,12 @@
     }
   }
   
-  .menu__buttons {
+  &__buttons {
     display: flex;
     gap: 38px;
   }
   
-  .menu__contact-button {
+  &__contact-button {
     width: 154px;
     height: 48px;
     color: $white-color;
@@ -58,7 +57,7 @@
     }
   }
   
-  .menu__join-button {
+  &__join-button {
     width: 154px;
     height: 48px;
     color: $black-text-color;
@@ -78,7 +77,8 @@
     }
   }
 
-  .menu-button {
+  &__button {
     display: none;
   }
   
+}

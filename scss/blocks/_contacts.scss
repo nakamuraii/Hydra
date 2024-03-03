@@ -1,8 +1,7 @@
 .contacts {
     width: 100%;
-  }
-  
-  .contacts__container {
+
+  &__container {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -15,23 +14,23 @@
     margin-bottom: 90px;
   }
 
-  .contacts__slide-prev-button, .contacts__slide-next-button {
+  &__slide-prev-button, &__slide-next-button {
     display: none;
   }
 
-  .contacts__items {
+  &__items {
     display: flex;
     position: relative;
   }
   
-  .contacts__item {
+  &__item {
     display: flex;
     align-items: center;
     padding: 30px 60px;
     gap: 15px;
   }
   
-  .contacts__text {
+  &__text {
     display: flex;
     flex-direction: column;
     gap: 10px;
@@ -54,3 +53,4 @@
     border-right: 1px solid rgba(192, 183, 232, 0.33);
     padding: 30px 60px;
   }
+}

@@ -69,4 +69,7 @@ if (screenWidth <= 430) {
 
     const copyrightItem = document.getElementById('copyright');
     copyrightItem.innerHTML = '2023 © HYDRA LANDING PAGE <br>BY ZINE. E. FALOUTI <br>ALL RIGHTS RESERVED'
+
+    const borderDeleteItem = document.getElementById('borderDeleteItem');
+    borderDeleteItem.classList.remove('border')
 }

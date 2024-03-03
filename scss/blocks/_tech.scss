@@ -2,9 +2,7 @@
     width: 100%;
     position: relative;
   
-  }
-  
-  .tech__container {
+  &__container {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -15,15 +13,6 @@
     background-image: url('../img/banner-img.png');
     border-radius: 160px;
     box-shadow: 0px 4px 4px 0px rgba(192, 183, 232, 0.01);
-  
-    .tech__text {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      flex-direction: column;
-      transform: translate(0, 45%);
-      gap: 10px;
-    }
   
     h2 {
       font-size: 36px;
@@ -56,3 +45,13 @@
       }
     }
   }
+
+  &__text {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    transform: translate(0, 45%);
+    gap: 10px;
+  }
+}

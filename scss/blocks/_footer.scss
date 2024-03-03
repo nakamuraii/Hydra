@@ -1,20 +1,19 @@
-footer {
-    width: 100%;
-  }
-  
-  .footer__container {
+.footer {
+  width: 100%;
+
+  &__container {
     display: flex;
     flex-direction: column;
     margin-top: 122px;
   }
-  
-  .footer__links {
+
+  &__links {
     position: relative;
     display: flex;
     align-items: start;
     justify-content: space-between;
     padding-bottom: 80px;
-  
+
     &::after {
       content: '';
       position: absolute;
@@ -24,14 +23,14 @@ footer {
       height: 2px;
       background: radial-gradient(circle, #8176af, #2f2c41);
     }
-  
+
     ul {
       position: relative;
       display: flex;
       flex-direction: column;
       gap: 25px;
       height: 200px;
-  
+
       &::after {
         content: '';
         position: absolute;
@@ -41,12 +40,12 @@ footer {
         height: 100%;
         background: radial-gradient(circle, #8176af, #2f2c41);
       }
-  
+
       li {
         font-weight: 700;
         line-height: 20px;
         transition: all .2s;
-  
+
         &:hover {
           color: $style-color;
           transform: scale(1.1) translateX(8px);
@@ -54,22 +53,22 @@ footer {
       }
     }
   }
-  
-  .footer__links-container {
+
+  &__links-container {
     position: relative;
     display: flex;
     flex-direction: column;
     gap: 40px;
-  
+
     p {
       font-weight: 700;
       line-height: 20px;
     }
-  
+
     div {
       display: flex;
       gap: 20px;
-  
+
       svg {
         transition: all .2s;
         &:hover {
@@ -77,7 +76,7 @@ footer {
         }
       }
     }
-  
+
     &::after {
       content: '';
       position: absolute;
@@ -88,8 +87,8 @@ footer {
       background: radial-gradient(circle, #8176af, #2f2c41);
     }
   }
-  
-  .footer__button {
+
+  &__button {
     width: 214px;
     height: 48px;
     margin-top: 8px;
@@ -101,15 +100,15 @@ footer {
     line-height: 15px;
     background: linear-gradient(90.00deg, rgb(129, 118, 175),rgb(192, 183, 232) 100%);
     transition: all .2s;
-  
+
     &:hover {
       border-color: $style-color;
       transform: scale(1.06);
       background: linear-gradient(90.00deg, rgb(146, 137, 182),rgb(200, 193, 235) 100%);
     }
   }
-  
-  .footer__copyright {
+
+  &__copyright {
     padding: 50px 0;
     text-align: center;
     
@@ -120,3 +119,4 @@ footer {
       letter-spacing: 2px;
     }
   }
+}
