@@ -8,7 +8,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="dns-prefetch" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="css/style.css">
-  <link rel="icon" href="/img/logo.ico" type="image/x-icon">
+  <link rel="icon" href="img/logo.ico" type="image/x-icon">
   <title>Hydra</title>
 </head>
 <body>
@@ -16,8 +16,8 @@
     <div class="wrapper">
       <div class="menu__container">
         <div class="menu__logo-container">
-          <img src="img/svg/logo.svg" alt="logo">
-          <img src="img/svg/logo-title.svg" alt="logo-title">
+          <img class="img1" src="img/svg/logo.svg" alt="logo">
+          <img class="img2" src="img/svg/logo-title.svg" alt="logo-title">
         </div>
         <ul class="menu__list">
           <li class="menu__item"><a href="#" class="menu__link">ABOUT</a></li>
@@ -29,18 +29,21 @@
           <button class="menu__contact-button" id="menuContactButton">CONTACT US</button>
           <button class="menu__join-button" id="menuJoinButton">JOIN HYDRA</button>
         </div>
+        <div class="menu-button">
+          <img src="img/svg/menu-button.svg" alt="menu-btn">
+        </div>
       </div>  
     </div>    
   </nav>
 
-  <main class="main">
+  <main class="main" id="main">
     <section class="header">
       <div class="wrapper">
         <div class="header__container">
           <div class="header__title">
             <div>
-              <h1 class="header__title-ftext"><span style="color: rgb(129, 118, 175); font-size: 46px;">Dive</span> Into The Depths </h1>
-              <h1 class="header__title-stext"><span style="font-size: 40px; padding-top: 15px;">Of <span style="color: rgb(192, 183, 232); font-size: 46px;">Virtual Reality</span></span></h1>
+              <h1 class="header__title-ftext"><span class="ft1">Dive</span> Into The Depths </h1>
+              <h1 class="header__title-stext"><span>Of</span> <span class="ft2">Virtual Reality</span></h1>
             </div>
             <p class="header__desc-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
               sed do eiusmod tempor incididunt ut labore et dolore 
@@ -58,28 +61,32 @@
 
     <section class="contacts">
       <div class="wrapper">
-        <div class="contacts__container">
-          <div class="contacts__item">
-            <svg width="40.833" height="61.25" viewBox="0 0 40.833 61.25" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M20.417 0c11.275 0 20.416 9.14 20.416 20.417 0 3.409-.833 6.621-2.312 9.448L20.417 61.25 2.732 30.626A20.3 20.3 0 0 1 0 20.416C0 9.142 9.14 0 20.417 0m0 5.833c-8.055 0-14.584 6.53-14.584 14.584 0 2.316.535 4.538 1.546 6.544l.49.895 12.548 21.727 12.636-21.88A14.47 14.47 0 0 0 35 20.417c0-8.055-6.53-14.584-14.583-14.584m0 5.834a8.75 8.75 0 1 1 0 17.5 8.75 8.75 0 0 1 0-17.5m0 5.833a2.917 2.917 0 1 0 0 5.833 2.917 2.917 0 0 0 0-5.833" fill="#C0B7E8" fill-rule="evenodd"/></svg>
-            <div class="contacts__text">
-              <h2>Pay Us a Visit</h2>
-              <p>Union St, Seattle, WA 98101, United States</p>
+        <div class="contacts__container" id="contactsSlider">
+          <button class="contacts__slide-prev-button" id="prevBtn1"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M14.5 18.25 8.25 12l6.25-6.25M12 23.25c6.213 0 11.25-5.037 11.25-11.25S18.213.75 12 .75.75 5.787.75 12 5.787 23.25 12 23.25" stroke="#FFF" stroke-width="1.5" stroke-linejoin="round" stroke-linecap="round"/></svg></button>
+          <div class="contacts__items">
+            <div class="contacts__item active-slide">
+              <svg width="40.833" height="61.25" viewBox="0 0 40.833 61.25" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M20.417 0c11.275 0 20.416 9.14 20.416 20.417 0 3.409-.833 6.621-2.312 9.448L20.417 61.25 2.732 30.626A20.3 20.3 0 0 1 0 20.416C0 9.142 9.14 0 20.417 0m0 5.833c-8.055 0-14.584 6.53-14.584 14.584 0 2.316.535 4.538 1.546 6.544l.49.895 12.548 21.727 12.636-21.88A14.47 14.47 0 0 0 35 20.417c0-8.055-6.53-14.584-14.583-14.584m0 5.834a8.75 8.75 0 1 1 0 17.5 8.75 8.75 0 0 1 0-17.5m0 5.833a2.917 2.917 0 1 0 0 5.833 2.917 2.917 0 0 0 0-5.833" fill="#C0B7E8" fill-rule="evenodd"/></svg>
+              <div class="contacts__text">
+                <h2>Pay Us a Visit</h2>
+                <p>Union St, Seattle, WA 98101, United States</p>
+              </div>
+            </div>
+            <div class="contacts__item border">
+              <svg width="50.255" height="50.255" viewBox="0 0 50.255 50.255" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M47.253 42.793c.01 2.546-2.28 4.673-4.85 4.44-22.19.018-39.399-17.35-39.381-39.391-.232-2.557 1.884-4.838 4.427-4.84h6.675a4.46 4.46 0 0 1 2.945 1.073c2.328 1.998 3.825 8.779 3.249 11.474-.45 2.105-2.571 3.577-4.014 5.016a35.56 35.56 0 0 0 13.35 13.324c1.442-1.44 2.917-3.557 5.026-4.006 2.705-.576 9.53.923 11.52 3.267a4.44 4.44 0 0 1 1.053 2.981zM31.275 11.605c1.812.354 3.611 1.153 4.917 2.458s2.104 3.105 2.458 4.917M32.504 3.001c3.765.418 7.153 2.24 9.833 4.917s4.494 6.069 4.917 9.833" stroke="#C0B7E8" stroke-width="6" stroke-linejoin="round"/></svg>
+              <div class="contacts__text">
+                <h2>Give Us a Call</h2>
+                <p>(110) 1111-1010</p>
+              </div>
+            </div>
+            <div class="contacts__item">
+              <svg width="54.75" height="43.917" viewBox="0 0 54.75 43.917" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M49.042 3a2.7 2.7 0 0 1 1.915.793 2.7 2.7 0 0 1 .793 1.915v32.5a2.71 2.71 0 0 1-2.708 2.709H5.708A2.71 2.71 0 0 1 3 38.208v-32.5a2.7 2.7 0 0 1 .793-1.915A2.7 2.7 0 0 1 5.708 3zm-45.249.793 19.752 19.752a5.417 5.417 0 0 0 7.66 0L50.957 3.793" stroke="#C0B7E8" stroke-width="6" stroke-linejoin="round"/></svg>
+              <div class="contacts__text">
+                <h2 id="cTransformItem">Send Us a Message</h2>
+                <p>Contact@HydraVTech.com</p>
+              </div>
             </div>
           </div>
-          <div class="contacts__item border">
-            <svg width="50.255" height="50.255" viewBox="0 0 50.255 50.255" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M47.253 42.793c.01 2.546-2.28 4.673-4.85 4.44-22.19.018-39.399-17.35-39.381-39.391-.232-2.557 1.884-4.838 4.427-4.84h6.675a4.46 4.46 0 0 1 2.945 1.073c2.328 1.998 3.825 8.779 3.249 11.474-.45 2.105-2.571 3.577-4.014 5.016a35.56 35.56 0 0 0 13.35 13.324c1.442-1.44 2.917-3.557 5.026-4.006 2.705-.576 9.53.923 11.52 3.267a4.44 4.44 0 0 1 1.053 2.981zM31.275 11.605c1.812.354 3.611 1.153 4.917 2.458s2.104 3.105 2.458 4.917M32.504 3.001c3.765.418 7.153 2.24 9.833 4.917s4.494 6.069 4.917 9.833" stroke="#C0B7E8" stroke-width="6" stroke-linejoin="round"/></svg>
-            <div class="contacts__text">
-              <h2>Give Us a Call</h2>
-              <p>(110) 1111-1010</p>
-            </div>
-          </div>
-          <div class="contacts__item">
-            <svg width="54.75" height="43.917" viewBox="0 0 54.75 43.917" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M49.042 3a2.7 2.7 0 0 1 1.915.793 2.7 2.7 0 0 1 .793 1.915v32.5a2.71 2.71 0 0 1-2.708 2.709H5.708A2.71 2.71 0 0 1 3 38.208v-32.5a2.7 2.7 0 0 1 .793-1.915A2.7 2.7 0 0 1 5.708 3zm-45.249.793 19.752 19.752a5.417 5.417 0 0 0 7.66 0L50.957 3.793" stroke="#C0B7E8" stroke-width="6" stroke-linejoin="round"/></svg>
-            <div class="contacts__text">
-              <h2>Send Us a Message</h2>
-              <p>Contact@HydraVTech.com</p>
-            </div>
-          </div>
+          <button class="contacts__slide-next-button" id="nextBtn1"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M9.5 18.25 15.75 12 9.5 5.75m2.5 17.5C5.787 23.25.75 18.213.75 12S5.787.75 12 .75 23.25 5.787 23.25 12 18.213 23.25 12 23.25" stroke="#FFF" stroke-width="1.5" stroke-linejoin="round" stroke-linecap="round"/></svg></button>
         </div>
       </div>
     </section>
@@ -121,7 +128,7 @@
 
           <div class="about__content">
             <div class="about__content-text">
-              <h2 style="min-width: 297px;"><span>WHY BUILD</span> <br>WITH HYDRA?</h2>
+              <h2 class="about-min"><span>WHY BUILD</span> <br>WITH HYDRA?</h2>
               <img src="img/svg/about-arrow.svg" alt="arrow">
               <p>
                 Vitae sapien pellentesque habitant morbi tristique senectus et netus et. Feugiat 
@@ -138,8 +145,11 @@
     <section class="feel">
       <div class="wrapper">
         <div class="feel__container">
-          <div class="feel__item">
-            <div style="background-image: url(/img/item0.png);" class="feel__item-img"></div>
+          <button class="feel__container-prev-button" id="prevBtn2"><svg width="12" height="20" viewBox="0 0 12 20" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M10.167 17.917 2.25 10l7.917-7.917" stroke="#433D60" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+          <button class="feel__container-next-button" id="nextBtn2"><svg width="12" height="20" viewBox="0 0 12 20" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1.833 17.917 9.75 10 1.833 2.083" stroke="#433D60" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+
+          <div class="feel__item active-slide">
+            <div style="background-image: url(img/item0.png);" class="feel__item-img"></div>
             <h2>SIMULATION</h2>
             <p>
               Vitae sapien pellentesque habitant morbi
@@ -150,7 +160,7 @@
           </div>
 
           <div class="feel__item">
-            <div style="background-image: url(/img/item1.png);" class="feel__item-img"></div>
+            <div style="background-image: url(img/item1.png);" class="feel__item-img"></div>
             <h2>EDUCATION</h2>
             <p>
               Vitae sapien pellentesque habitant morbi
@@ -161,7 +171,7 @@
           </div>
 
           <div class="feel__item">
-            <div style="background-image: url(/img/item2.png);" class="feel__item-img"></div>
+            <div style="background-image: url(img/item2.png);" class="feel__item-img"></div>
             <h2>SELF-CARE</h2>
             <p>
               Vitae sapien pellentesque habitant morbi
@@ -172,7 +182,7 @@
           </div>
 
           <div class="feel__item">
-            <div style="background-image: url(/img/item3.png);" class="feel__item-img"></div>
+            <div style="background-image: url(img/item3.png);" class="feel__item-img"></div>
             <h2>OUTDOOR</h2>
             <p>
               Vitae sapien pellentesque habitant morbi
@@ -200,10 +210,12 @@
     <section class="engines">
       <div class="wrapper">
         <div class="engines__container">
-          <img src="img/svg/engine0.svg" alt="engine">
-          <img src="img/svg/engine1.svg" alt="engine">
-          <img src="img/svg/engine2.svg" alt="engine">
-          <img src="img/svg/engine3.svg" alt="engine">
+          <button class="engines__container-prev-button" id="prevBtn3"><svg width="12" height="20" viewBox="0 0 12 20" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1.833 17.917 9.75 10 1.833 2.083" stroke="#433D60" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+          <button class="engines__container-next-button" id="nextBtn3"><svg width="12" height="20" viewBox="0 0 12 20" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M10.167 17.917 2.25 10l7.917-7.917" stroke="#433D60" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+          <img class="engine-item active-slide" src="img/svg/engine0.svg" alt="engine">
+          <img class="engine-item" src="img/svg/engine1.svg" alt="engine">
+          <img class="engine-item" src="img/svg/engine2.svg" alt="engine">
+          <img class="engine-item" src="img/svg/engine3.svg" alt="engine">
         </div>
       </div>
     </section>
@@ -212,8 +224,8 @@
       <div class="wrapper">
         <div class="process__container">
           <div class="process__description">
-            <div style="display: flex;">
-              <h2 style="min-width: 321px;"><span>HOW WE BUILD</span> <br>WITH HYDRA VR?</h2>
+            <div class="process__text">
+              <h2 class="process-min"><span>HOW WE BUILD</span> <br>WITH HYDRA VR?</h2>
               <img src="img/svg/about-arrow.svg" alt="arrow">
             </div>
             <p>
@@ -225,7 +237,9 @@
           </div>
 
           <div class="process__steps">
-            <div class="process__step">
+            <button class="process__steps-prev-button" id="prevBtn4"><svg width="12" height="20" viewBox="0 0 12 20" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1.833 17.917 9.75 10 1.833 2.083" stroke="#433D60" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+            <button class="process__steps-next-button" id="nextBtn4"><svg width="12" height="20" viewBox="0 0 12 20" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M10.167 17.917 2.25 10l7.917-7.917" stroke="#433D60" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+            <div class="process__step active-slide">
               <div class="step__num">01</div>
               <h3><span class="step__arrow"><img src="img/svg/step-arrow.svg" alt="arrow"></span><div>3D Conception <br><span style="margin-right: 18px;">& Design</span></div></h3>
             </div>
@@ -306,11 +320,11 @@
           </div>
         </div>
         <div class="footer__copyright">
-          <p>2023 © HYDRA LANDING PAGE - BY ZINE. E. FALOUTI - ALL RIGHTS RESERVED </p>
+          <p id="copyright">2023 © HYDRA LANDING PAGE - BY ZINE. E. FALOUTI - ALL RIGHTS RESERVED </p>
         </div>
       </div>
     </div>
   </footer>
-  <script src="js/script.js"></script>
+  <script src="js/script.js" async></script>
 </body>
 </html>

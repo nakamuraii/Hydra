@@ -1,0 +1,84 @@
+.menu {
+    width: 100%;
+    margin-top: 25px;
+  }
+  
+  .menu__container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  .menu__logo-container {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-right: 50px;
+  }
+  
+  .menu__list {
+    display: flex;
+    gap: 42px;
+  }
+  
+  .menu__item {
+    font-size: 12px;
+    font-weight: 700;
+    line-height: 15px;
+    transition: all .2s;
+  
+    &:hover {
+      color: $style-color;
+      transform: scale(1.1);
+    }
+  }
+  
+  .menu__buttons {
+    display: flex;
+    gap: 38px;
+  }
+  
+  .menu__contact-button {
+    width: 154px;
+    height: 48px;
+    color: $white-color;
+    border: 2px solid $white-color;
+    border-radius: 40px;
+    font-size: 12px;
+    font-weight: 700;
+    line-height: 15px;
+    background: transparent;
+    transition: all .2s;
+  
+    &:hover {
+      color: $style-color;
+      border-color: $style-color;
+      background-color: $transparent-style-color;
+      transform: scale(1.06);
+    }
+  }
+  
+  .menu__join-button {
+    width: 154px;
+    height: 48px;
+    color: $black-text-color;
+    border-radius: 40px;
+    border: none;
+    font-size: 12px;
+    font-weight: 700;
+    line-height: 15px;
+    background: linear-gradient(90.00deg, rgb(129, 118, 175),rgb(192, 183, 232) 100%);
+    transition: all .2s;
+  
+  
+    &:hover {
+      border-color: $style-color;
+      transform: scale(1.06);
+      background: linear-gradient(90.00deg, rgb(146, 137, 182),rgb(200, 193, 235) 100%);
+    }
+  }
+
+  .menu-button {
+    display: none;
+  }
+  

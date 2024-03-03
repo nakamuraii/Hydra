@@ -1,0 +1,110 @@
+.about {
+    width: 100%;
+    position: relative;
+  
+    &::before {
+      content: '';
+      position: absolute;
+      width: 1440px;
+      height: 100%;
+      background-image: url('../img/svg/about-bg.svg');
+      background-repeat: no-repeat;
+      top: 240px;
+      left: calc(50% - 720px);
+      overflow: hidden;
+      z-index: -1;
+    }
+  }
+  
+  .about__container {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .about__content {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .about__content-text {
+    display: flex;
+    margin-bottom: 100px;
+
+    .about-min {
+      min-width: 297px;
+    }
+
+    h2 {
+      font-size: 36px;
+      font-weight: 300;
+      line-height: 55px;
+      span {
+        font-weight: 700;
+      }
+    }
+    img {
+      transform: translate(-22px);
+      margin-right: 120px;
+    }
+    p {
+      line-height: 25px;
+      color: $gray-text-color;
+    }
+  }
+  
+  .about__content-sub {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    gap: 120px;
+    margin-bottom: 100px;
+    .about__image {
+      background-image: url('../img/about-img.png');
+      border-radius: 240px 100px 240px 100px;
+      box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+      min-width: 524px;
+      min-height: 557px;
+    }
+  }
+  
+  .about__content-text-sub {
+    display: flex;
+    flex-direction: column;
+    gap: 28px;
+    h2 {
+      font-size: 36px;
+      font-weight: 300;
+      line-height: 50px;
+      margin-bottom: 10px;
+      span {
+        font-weight: 700;
+      }
+    }
+    img {
+      transform: translate(-22px);
+      margin-right: 120px;
+    }
+    p {
+      line-height: 25px;
+      color: $gray-text-color;
+    }
+  }
+  
+  .about__button {
+    width: 214px;
+    height: 48px;
+    color: $black-text-color;
+    border-radius: 40px;
+    border: none;
+    font-size: 12px;
+    font-weight: 700;
+    line-height: 15px;
+    background: linear-gradient(90.00deg, rgb(129, 118, 175),rgb(192, 183, 232) 100%);
+    transition: all .2s;
+  
+    &:hover {
+      border-color: $style-color;
+      transform: scale(1.06);
+      background: linear-gradient(90.00deg, rgb(146, 137, 182),rgb(200, 193, 235) 100%);
+    }
+  }

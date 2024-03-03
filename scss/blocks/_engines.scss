@@ -1,0 +1,17 @@
+.engines {
+    width: 100%;
+  }
+  
+  .engines__container {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+  
+    img {
+      transition: all .2s;
+      &:hover {
+        transform: scale(1.05);
+      }
+    }
+  }

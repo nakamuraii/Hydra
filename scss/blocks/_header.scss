@@ -1,0 +1,103 @@
+.header {
+    width: 100%;
+    position: relative;
+  }
+  
+  .header__container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  .header__title  {
+    display: flex;
+    flex-direction: column;
+    gap: 36px;
+    width: 456px;
+  }
+  
+  .header__title-container {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  .header__title-ftext {
+    font-size: 40px;
+    font-weight: 700;
+    .ft1 {
+      color: rgb(129, 118, 175);
+      font-size: 46px;
+    }
+  }
+  
+  .header__title-stext {
+    font-size: 40px;
+    font-weight: 700;
+    margin-top: 18px;
+    .ft2 {
+      color: rgb(192, 183, 232);
+      font-size: 46px;
+    }
+  }
+  
+  .header__desc-text {
+    line-height: 25px;
+    color: $gray-text-color;
+  
+  }
+  
+  .header__button-container {
+    display: flex;
+    margin-top: 30px;
+    gap: 40px;
+  }
+  
+  .header__button {
+    width: 214px;
+    height: 48px;
+    border: none;
+    border-radius: 40px;
+    background: linear-gradient(90.00deg, rgb(129, 118, 175),rgb(192, 183, 232) 100%);
+    font-size: 12px;
+    font-weight: 700;
+    line-height: 15px;
+    transition: all .2s;
+  
+    &:hover{
+      border-color: $style-color;
+      transform: scale(1.06);
+      background: linear-gradient(90.00deg, rgb(146, 137, 182),rgb(200, 193, 235) 100%);
+    }
+  }
+  
+  .header__arrow {
+    transition: all .2s;
+  }
+  
+  .header__button:hover + .header__arrow {
+    transform: translateX(20px);
+  }
+  
+  
+  
+  .header__illustration {
+    border-radius: 100px 100px 100px 240px;
+    background-image: url('../img/header-illustration.png');
+    background-position: -30px -70px;
+    min-width: 490px;
+    min-height: 426px;
+    position: relative;
+  
+    &::before {
+      content: '';
+      background: rgba(0, 0, 0, 0.13); 
+      position: absolute;
+      top: -20px; 
+      left: -20px; 
+      width: calc(100% + 40px);
+      height: calc(100% + 40px);
+      border-radius: 115px 115px 115px 255px;
+      z-index: -1; 
+    }
+  }
