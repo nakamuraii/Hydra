@@ -1,4 +1,8 @@
 @media only screen and (max-width: 1490px) {
+  .wrapper {
+    padding: 0 40px;
+  }
+
   .main {
     &::before {
       content: none;
@@ -33,19 +37,19 @@
       gap: 30px;
       margin: 0 auto;
       text-align: center;
+      justify-content: center;
+      align-items: center;
     }
   
     &__item {
+      width: 100%;
+
       h2 {
         font-size: 30px;
       }
   
       p {
         font-size: 16px;
-      }
-  
-      &-img {
-        width: 175px;
       }
   
       button {
@@ -79,7 +83,44 @@
 
 
 
-@media only screen and (max-width: 432px) {
+@media only screen and (max-width: 1149px) {
+  .menu {
+    &__list {
+      display: none;
+    }
+
+    &__button {
+      display: flex;
+      justify-content: end;
+      width: 100%;
+      height: 40px;
+    }
+  }
+
+  .footer {
+    &__links-container {
+      &::after {
+        content: none;
+      }
+    }
+
+    &__links {
+      ul {
+        &::after {
+          content: none;
+        }
+      }
+    }
+  }
+}
+
+
+
+
+
+
+
+@media only screen and (max-width: 496px) {
   .footer__links, .engines__container, .header__container, .about__content-text, .about__content-sub, .process__description {
     flex-direction: column;
   }
@@ -433,12 +474,7 @@
       margin-bottom: 80px;
     }
 
-    &__steps {
-      position: relative;
-      margin-top: 40px;
-    }
-
-    &__step {
+    &__item {
       display: none;
   
       h3 {
@@ -448,6 +484,9 @@
     }
 
     &__steps {
+      position: relative;
+      margin-top: 40px;
+
       &-prev-button, &-next-button{
         position: absolute;
         z-index: 300;

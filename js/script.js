@@ -1,3 +1,31 @@
+function handleScreenWidthChange() {
+    const screenWidth = window.innerWidth;
+    const pendingClassElements = document.querySelectorAll('.wait-class');
+
+    if (screenWidth <= 496) {
+        cTransformItem.innerHTML = 'Send Us';
+    
+        copyrightItem.innerHTML = '2023 © HYDRA LANDING PAGE <br>BY ZINE. E. FALOUTI <br>ALL RIGHTS RESERVED'
+    
+        borderDeleteItem.classList.remove('border');
+        
+        pendingClassElements.forEach(element => {
+            element.classList.add('active-slide');
+        });
+    } else {
+        pendingClassElements.forEach(element => {
+            element.classList.remove('active-slide');
+        });
+    }
+}
+
+let processItem = document.querySelector('.process__item');
+let cTransformItem = document.getElementById('cTransformItem');
+let copyrightItem = document.getElementById('copyright');
+let borderDeleteItem = document.getElementById('borderDeleteItem');
+
+let currentIndex = 0;
+
 function initializeSlider(prevBtnId, nextBtnId, sliderItemsSelector) {
     const prevBtn = document.getElementById(prevBtnId);
     const nextBtn = document.getElementById(nextBtnId);
@@ -14,12 +42,12 @@ function initializeSlider(prevBtnId, nextBtnId, sliderItemsSelector) {
         });
     }
       
-    function nextSlide() {
+    function prevSlide() {
         currentIndex = (currentIndex + 1) % sliderItems.length;
         showSlide(currentIndex);
     }
     
-    function prevSlide() {
+    function nextSlide() {
         currentIndex = (currentIndex - 1 + sliderItems.length) % sliderItems.length;
         showSlide(currentIndex);
     }
@@ -50,7 +78,7 @@ const slider3Config = {
 const slider4Config = {
     prevBtnId: 'prevBtn4',
     nextBtnId: 'nextBtn4',
-    sliderItemsSelector: '.process__step',
+    sliderItemsSelector: '.process__item',
 };
 
 initializeSlider(slider1Config.prevBtnId, slider1Config.nextBtnId, slider1Config.sliderItemsSelector, slider1Config.cTransformItemId);
@@ -58,18 +86,5 @@ initializeSlider(slider2Config.prevBtnId, slider2Config.nextBtnId, slider2Config
 initializeSlider(slider3Config.prevBtnId, slider3Config.nextBtnId, slider3Config.sliderItemsSelector, slider3Config.cTransformItemId);
 initializeSlider(slider4Config.prevBtnId, slider4Config.nextBtnId, slider4Config.sliderItemsSelector, slider4Config.cTransformItemId);
 
-
-const screenWidth = window.screen.width;
-
-let currentIndex = 0;
-
-if (screenWidth <= 430) {
-    const cTransformItem = document.getElementById('cTransformItem');
-    cTransformItem.innerHTML = 'Send Us';
-
-    const copyrightItem = document.getElementById('copyright');
-    copyrightItem.innerHTML = '2023 © HYDRA LANDING PAGE <br>BY ZINE. E. FALOUTI <br>ALL RIGHTS RESERVED'
-
-    const borderDeleteItem = document.getElementById('borderDeleteItem');
-    borderDeleteItem.classList.remove('border')
-}
+window.addEventListener('resize', handleScreenWidthChange);
+handleScreenWidthChange();

@@ -15,6 +15,9 @@
 @import "blocks/_buttons";
 @import "blocks/_main";
 
+html {
+  scroll-behavior: smooth;
+}
 
 body {
   margin: 0;
